@@ -1,7 +1,11 @@
-import { Button } from "@/components/ui/Button";
+import { Layout } from "./pages/Layout";
 
 function App() {
-  return <></>;
+  return (
+    <>
+      <Layout />
+    </>
+  );
 }
 
 export default App;
