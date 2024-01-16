@@ -1,5 +1,13 @@
 .ResizeHandleOuter {
-  flex: 0 0 1.5em;
   position: relative;
   outline: none;
+  border: 1px solid hsl(var(--border));
+}
+
+.ResizeHandleInner {
+  width: 1em;
+  height: 1em;
+  position: absolute;
+  left: calc(50% - 0.5rem);
+  top: calc(50% - 0.5rem);
 }

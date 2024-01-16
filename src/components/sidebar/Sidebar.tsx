@@ -1,6 +1,8 @@
+import styles from "./sidebar.module.css";
+
 export const Sidebar = () => {
   return (
-    <aside>
+    <aside className={styles.sidebar}>
       <h1>Uyama</h1>
       <nav>
         <ul>

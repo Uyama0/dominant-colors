@@ -9,7 +9,12 @@ export const Layout = () => {
     <>
       <PanelGroup direction="horizontal" className="dark">
         <>
-          <Panel collapsible={true} collapsedSize={10} minSize={20}>
+          <Panel
+            collapsible={true}
+            collapsedSize={10}
+            minSize={15}
+            maxSize={30}
+          >
             <Sidebar />
           </Panel>
           <ResizeHandle />
