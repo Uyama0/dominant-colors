@@ -1,4 +1,5 @@
 import { Inbox } from "lucide-react";
+import { Link } from "react-router-dom";
 
 import { Button } from "@/components/ui/Button";
 
@@ -13,11 +14,13 @@ export const SidebarNavItem: React.FC<MailItemProps> = ({
 }) => {
   return (
     <li>
-      <Button className="w-full justify-start" variant="ghost">
-        <Inbox size={16} className="mr-1" />
-        {label}
-        <span className="ml-auto">{messageNumber}</span>
-      </Button>
+      <Link to={label}>
+        <Button className="w-full justify-start" variant="ghost">
+          <Inbox size={16} className="mr-1" />
+          {label}
+          <span className="ml-auto">{messageNumber}</span>
+        </Button>
+      </Link>
     </li>
   );
 };

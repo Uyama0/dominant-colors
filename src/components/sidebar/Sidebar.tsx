@@ -1,17 +1,11 @@
 import { useFetch } from "@/hooks/useFetch";
 import { SidebarNavList } from "./sidebarNavItem/SidebarNavList";
+import { MailsObject } from "@/types/dataTypes";
 
 import styles from "./sidebar.module.css";
 
-export interface Post {
-  userId: number;
-  id: number;
-  title: string;
-  body: string;
-}
-
 export const Sidebar: React.FC = () => {
-  const { data, error } = useFetch<Post[]>(`http://localhost:3000/mails`);
+  const { data, error } = useFetch<MailsObject>(`http://localhost:3000/mails`);
 
   return (
     <aside className={styles.sidebar}>
