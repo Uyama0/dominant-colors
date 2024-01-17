@@ -9,11 +9,8 @@
 }
 
 .sidebar_navigaton_list {
-  padding: 0.5em;
-}
-
-.sidebar_navigaton_list {
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
+  padding: 0.5em;
 }

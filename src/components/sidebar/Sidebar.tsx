@@ -1,35 +1,24 @@
-import { Button } from "@/components/ui/Button";
+import { useFetch } from "@/hooks/useFetch";
+import { SidebarNavList } from "./sidebarNavItem/SidebarNavList";
 
 import styles from "./sidebar.module.css";
 
-import { Inbox } from "lucide-react";
+export interface Post {
+  userId: number;
+  id: number;
+  title: string;
+  body: string;
+}
 
-export const Sidebar = () => {
+export const Sidebar: React.FC = () => {
+  const { data, error } = useFetch<Post[]>(`http://localhost:3000/mails`);
+
   return (
     <aside className={styles.sidebar}>
       <div>
         <h1 className={styles.sidebar_header}>Uyama</h1>
       </div>
-      <nav className={styles.sidebar_navigaton}>
-        <ul className={styles.sidebar_navigaton_list}>
-          <li>
-            <Button className="w-full justify-start" variant="ghost">
-              <Inbox size={16} className="mr-1" />
-              Box
-              <span className="ml-auto">128</span>
-            </Button>
-          </li>
-          <li>
-            <Button variant="ghost">Sent</Button>
-          </li>
-          <li>
-            <Button variant="ghost">Trash</Button>
-          </li>
-          <li>
-            <Button variant="ghost">Archive</Button>
-          </li>
-        </ul>
-      </nav>
+      <SidebarNavList mails={data} />
     </aside>
   );
 };

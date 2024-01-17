@@ -1,44 +1,46 @@
 {
-  "inbox": [
-    {
-      "id": 1,
-      "sender": "john.doe@example.com",
-      "subject": "Meeting Tomorrow",
-      "body": "Hi team, Let's have a meeting tomorrow at 10 AM.",
-      "timestamp": "2024-01-20T08:30:00Z",
-      "read": false
-    },
-    {
-      "id": 2,
-      "sender": "alice.smith@example.com",
-      "subject": "Project Update",
-      "body": "Hello everyone, Here's the latest update on our project.",
-      "timestamp": "2024-01-19T15:45:00Z",
-      "read": true
-    }
-  ],
-  "sent": [
-    {
-      "id": 3,
-      "recipient": "client@example.com",
-      "subject": "Contract Proposal",
-      "body": "Dear client, Please find attached the contract proposal.",
-      "timestamp": "2024-01-18T12:20:00Z"
-    },
-    {
-      "id": 4,
-      "recipient": "partners@example.com",
-      "subject": "Partnership Inquiry",
-      "body": "Hello, We are interested in exploring a potential partnership.",
-      "timestamp": "2024-01-17T09:55:00Z"
-    }
-  ],
-  "drafts": [
-    {
-      "id": 5,
-      "subject": "Idea Proposal",
-      "body": "Dear team, I have an idea for a new project. Let's discuss it in the next meeting.",
-      "timestamp": "2024-01-16T14:10:00Z"
-    }
-  ]
+  "mails": {
+    "Inbox": [
+      {
+        "id": 1,
+        "sender": "john.doe@example.com",
+        "subject": "Meeting Tomorrow",
+        "body": "Hi team, Let's have a meeting tomorrow at 10 AM.",
+        "timestamp": "2024-01-20T08:30:00Z",
+        "read": false
+      },
+      {
+        "id": 2,
+        "sender": "alice.smith@example.com",
+        "subject": "Project Update",
+        "body": "Hello everyone, Here's the latest update on our project.",
+        "timestamp": "2024-01-19T15:45:00Z",
+        "read": true
+      }
+    ],
+    "Sent": [
+      {
+        "id": 3,
+        "recipient": "client@example.com",
+        "subject": "Contract Proposal",
+        "body": "Dear client, Please find attached the contract proposal.",
+        "timestamp": "2024-01-18T12:20:00Z"
+      },
+      {
+        "id": 4,
+        "recipient": "partners@example.com",
+        "subject": "Partnership Inquiry",
+        "body": "Hello, We are interested in exploring a potential partnership.",
+        "timestamp": "2024-01-17T09:55:00Z"
+      }
+    ],
+    "Drafts": [
+      {
+        "id": 5,
+        "subject": "Idea Proposal",
+        "body": "Dear team, I have an idea for a new project. Let's discuss it in the next meeting.",
+        "timestamp": "2024-01-16T14:10:00Z"
+      }
+    ]
+  }
 }
