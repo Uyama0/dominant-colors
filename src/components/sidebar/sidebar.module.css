@@ -1,0 +1,19 @@
+.sidebar {
+  position: relative;
+}
+
+.sidebar_header {
+  border-bottom: 2px solid hsl(var(--border));
+  padding: 0.5em;
+  text-align: center;
+}
+
+.sidebar_navigaton_list {
+  padding: 0.5em;
+}
+
+.sidebar_navigaton_list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
