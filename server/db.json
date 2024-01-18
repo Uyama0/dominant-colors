@@ -1,6 +1,6 @@
 {
   "mails": {
-    "Inbox": [
+    "Mail": [
       {
         "id": 1,
         "sender": "john.doe@example.com",

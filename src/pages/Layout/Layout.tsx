@@ -14,7 +14,7 @@ export const Layout = () => {
           </Panel>
           <ResizeHandle />
         </>
-        <Panel>
+        <Panel minSize={30}>
           <Routers />
         </Panel>
         <ResizeHandle />
