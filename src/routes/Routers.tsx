@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, redirect as Redirect } from "react-router-dom";
 
 import { Mail } from "@/pages/mail/Mail";
 import { Sent } from "@/pages/sent/Sent";
@@ -10,6 +10,7 @@ export const Routers = () => {
       <Route path="/Mail" element={<Mail />} />
       <Route path="/Sent" element={<Sent />} />
       <Route path="/Drafts" element={<Drafts />} />
+      <Route path="/*" element={<Mail />} />
     </Routes>
   );
 };
