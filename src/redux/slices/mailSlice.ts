@@ -1,9 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const MailsSlice = createSlice({
+const mailSlice = createSlice({
   name: "mails",
   initialState: {
-    data: null,
+    data: {},
     error: null,
   },
   reducers: {
@@ -16,5 +16,5 @@ const MailsSlice = createSlice({
   },
 });
 
-export const { setData, setError } = MailsSlice.actions;
-export default MailsSlice.reducer;
+export const { setData, setError } = mailSlice.actions;
+export default mailSlice.reducer;
