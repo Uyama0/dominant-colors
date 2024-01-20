@@ -24,6 +24,7 @@
     --input: 240 5.9% 90%;
     --ring: 240 5.9% 10%;
     --radius: 0.5rem;
+    --body-screen: calc(100vh - (1rem + 2px));
   }
 
   .dark {
@@ -46,7 +47,6 @@
     --border: 240 3.7% 15.9%;
     --input: 240 3.7% 15.9%;
     --ring: 240 4.9% 83.9%;
-    --rr: rgb(193, 54, 54);
   }
 }
 
@@ -63,4 +63,17 @@ body {
   margin: 0.5rem;
   color: hsl(var(--foreground));
   border: 1px solid hsl(var(--border));
+}
+
+#root {
+  height: var(--body-screen);
+}
+
+::-webkit-scrollbar {
+  width: 0.2em;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: hsl(var(--border));
+  border-radius: 100vw;
 }

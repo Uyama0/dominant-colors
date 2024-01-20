@@ -1,0 +1,44 @@
+.message_list {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  font-size: small;
+  overflow-y: auto;
+  max-height: calc(var(--body-screen) - (2px + 2rem));
+}
+
+.message {
+  padding: 0.5rem;
+  border: 2px solid hsl(var(--border));
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  gap: 0.33rem;
+  margin-bottom: 0.5rem;
+}
+
+.message:hover {
+  background-color: hsl(var(--accent));
+  cursor: pointer;
+}
+
+.message_header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.message h2 {
+  font-weight: 600;
+}
+
+.message_header span {
+  color: hsl(var(--muted-foreground));
+}
+
+.message p {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  color: hsl(var(--muted-foreground));
+}

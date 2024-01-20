@@ -9,5 +9,5 @@
   height: 1em;
   position: absolute;
   left: calc(50% - 0.5rem);
-  top: calc(50% - 0.5rem);
+  top: calc(50vh - 0.5rem);
 }

@@ -1,4 +1,6 @@
 import { useEffect, useReducer, useRef } from "react";
+import { useDispatch } from "react-redux";
+import { setData, setError } from "@/redux/slices/mailSlice";
 
 interface State<T> {
   data?: T;
@@ -7,7 +9,6 @@ interface State<T> {
 
 type Cache<T> = { [url: string]: T };
 
-// discriminated union type
 type Action<T> =
   | { type: "loading" }
   | { type: "fetched"; payload: T }
@@ -18,16 +19,14 @@ export function useFetch<T = unknown>(
   options?: RequestInit
 ): State<T> {
   const cache = useRef<Cache<T>>({});
-
-  // Used to prevent state update if the component is unmounted
   const cancelRequest = useRef<boolean>(false);
+  const dispatch = useDispatch(); // Получение функции dispatch из react-redux
 
   const initialState: State<T> = {
     error: undefined,
     data: undefined,
   };
 
-  // Keep state logic separated
   const fetchReducer = (state: State<T>, action: Action<T>): State<T> => {
     switch (action.type) {
       case "loading":
@@ -41,20 +40,18 @@ export function useFetch<T = unknown>(
     }
   };
 
-  const [state, dispatch] = useReducer(fetchReducer, initialState);
+  const [state, localDispatch] = useReducer(fetchReducer, initialState);
 
   useEffect(() => {
-    // Do nothing if the url is not given
     if (!url) return;
 
     cancelRequest.current = false;
 
     const fetchData = async () => {
-      dispatch({ type: "loading" });
+      localDispatch({ type: "loading" });
 
-      // If a cache exists for this url, return it
       if (cache.current[url]) {
-        dispatch({ type: "fetched", payload: cache.current[url] });
+        localDispatch({ type: "fetched", payload: cache.current[url] });
         return;
       }
 
@@ -68,23 +65,25 @@ export function useFetch<T = unknown>(
         cache.current[url] = data;
         if (cancelRequest.current) return;
 
-        dispatch({ type: "fetched", payload: data });
+        // Диспетчеризация данных в store
+        dispatch(setData(data));
+        localDispatch({ type: "fetched", payload: data });
       } catch (error) {
         if (cancelRequest.current) return;
 
-        dispatch({ type: "error", payload: error as Error });
+        // Диспетчеризация ошибки в store
+        dispatch(setError(error as Error));
+        localDispatch({ type: "error", payload: error as Error });
       }
     };
 
     void fetchData();
 
-    // Use the cleanup function for avoiding a possibly...
-    // ...state update after the component was unmounted
     return () => {
       cancelRequest.current = true;
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [url]);
+  }, [url, dispatch]);
 
   return state;
 }
