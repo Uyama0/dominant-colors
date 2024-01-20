@@ -40,33 +40,49 @@
         "body": "Hello team, I'm excited to announce a team-building event scheduled for next month. Please share your ideas for activities and let's make this a memorable experience for everyone.",
         "timestamp": "2024-01-17T10:20:00Z",
         "read": false
+      },
+      {
+        "id": 11,
+        "sender": "susan.wang@example.com",
+        "subject": "Upcoming Deadlines",
+        "body": "Dear team, As we approach the end of the month, I want to remind everyone about the upcoming deadlines for our current projects. Let's ensure we stay on track and meet our goals.",
+        "timestamp": "2024-01-18T14:30:00Z",
+        "read": true
+      },
+      {
+        "id": 12,
+        "sender": "michael.kane@example.com",
+        "subject": "Team Building Event",
+        "body": "Hello team, I'm excited to announce a team-building event scheduled for next month. Please share your ideas for activities and let's make this a memorable experience for everyone.",
+        "timestamp": "2024-01-17T10:20:00Z",
+        "read": false
       }
     ],
     "Sent": [
       {
         "id": 6,
-        "recipient": "client@example.com",
+        "sender": "client@example.com",
         "subject": "Contract Proposal",
         "body": "Dear client, Please find attached the contract proposal for your review. I'm available for any questions or clarifications you may have.",
         "timestamp": "2024-01-18T12:20:00Z"
       },
       {
         "id": 7,
-        "recipient": "partners@example.com",
+        "sender": "partners@example.com",
         "subject": "Partnership Inquiry",
         "body": "Hello, We are interested in exploring a potential partnership. Attached you'll find our proposal. Let's schedule a meeting to discuss this further.",
         "timestamp": "2024-01-17T09:55:00Z"
       },
       {
         "id": 8,
-        "recipient": "colleague@example.com",
+        "sender": "colleague@example.com",
         "subject": "Meeting Follow-Up",
         "body": "Hi [Colleague], I wanted to follow up on the points we discussed in our meeting earlier this week. Please review the attached summary and let me know your thoughts.",
         "timestamp": "2024-01-16T18:45:00Z"
       },
       {
         "id": 9,
-        "recipient": "supervisor@example.com",
+        "sender": "supervisor@example.com",
         "subject": "Progress Update",
         "body": "Dear [Supervisor], I'm providing you with a brief update on the progress of the ongoing project. Feel free to reach out if you need more detailed information.",
         "timestamp": "2024-01-15T11:10:00Z"
@@ -75,6 +91,7 @@
     "Drafts": [
       {
         "id": 10,
+        "sender": "supervisor@example.com",
         "subject": "Idea Proposal",
         "body": "Dear team, I have an idea for a new project. Let's discuss it in the next meeting. The proposal is attached for your reference. Looking forward to your feedback.",
         "timestamp": "2024-01-16T14:10:00Z"
