@@ -2,6 +2,7 @@ import { Panel, PanelGroup } from "react-resizable-panels";
 
 import { Sidebar } from "@/components/sidebar/Sidebar";
 import { Routers } from "@/routes/Routers";
+import { MessageDetails } from "@/components/messageDetails/MessageDetails";
 import ResizeHandle from "@/components/resizeHandle/ResizeHandle";
 
 export const Layout = () => {
@@ -18,7 +19,9 @@ export const Layout = () => {
           <Routers />
         </Panel>
         <ResizeHandle />
-        <Panel defaultSize={40}>...</Panel>
+        <Panel defaultSize={40}>
+          <MessageDetails />
+        </Panel>
       </PanelGroup>
     </>
   );
