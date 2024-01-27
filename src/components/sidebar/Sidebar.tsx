@@ -1,6 +1,6 @@
 import { useFetch } from "@/hooks/useFetch";
 import { SidebarNavList } from "./sidebarNav/SidebarNavList";
-import { MailsObject } from "@/types/dataTypes";
+import { MailsObject } from "@/types/mailTypes";
 
 import styles from "./sidebar.module.css";
 

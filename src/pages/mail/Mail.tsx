@@ -4,7 +4,7 @@ import { MessageList } from "../../components/messageList/MessageList";
 import { useSelector } from "react-redux";
 
 import styles from "../mail.module.css";
-import { RootState } from "@/types/dataTypes";
+import { RootState } from "@/types/mailTypes";
 
 export const Mail = () => {
   // rewrite for memo

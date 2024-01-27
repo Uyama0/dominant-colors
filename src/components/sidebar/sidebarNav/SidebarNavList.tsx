@@ -1,5 +1,5 @@
 import { SidebarNavItem } from "./SidebarNavItem";
-import { MailsObject } from "@/types/dataTypes";
+import { MailsObject } from "@/types/mailTypes";
 
 import styles from "../sidebar.module.css";
 

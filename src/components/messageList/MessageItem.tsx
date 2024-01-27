@@ -1,4 +1,4 @@
-import { MailItem } from "@/types/dataTypes";
+import { MailItem } from "@/types/mailTypes";
 
 import style from "./mail.module.css";
 

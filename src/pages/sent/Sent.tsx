@@ -1,7 +1,7 @@
 import { MessageList } from "../../components/messageList/MessageList";
 import { useSelector } from "react-redux";
 
-import { RootState } from "@/types/dataTypes";
+import { RootState } from "@/types/mailTypes";
 import styles from "../mail.module.css";
 
 export const Sent = () => {

@@ -1,6 +1,6 @@
 import { MessageItem } from "./MessageItem";
 
-import { MailsObject } from "@/types/dataTypes";
+import { MailsObject } from "@/types/mailTypes";
 import style from "./mail.module.css";
 
 export const MessageList: React.FC<MailsObject> = ({ messageData }) => {
