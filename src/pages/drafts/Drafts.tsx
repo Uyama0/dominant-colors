@@ -1,10 +1,9 @@
-import React from "react";
-
-import { MessageList } from "../../components/messageList/MessageList";
 import { useSelector } from "react-redux";
 
-import styles from "../mail.module.css";
+import { MessageList } from "@/components/messageList/MessageList";
 import { RootState } from "@/types/mailTypes";
+
+import styles from "../mail.module.css";
 
 export const Drafts = () => {
   const messageData = useSelector(

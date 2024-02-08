@@ -11,7 +11,7 @@ export interface MailItem {
   subject?: string;
   body?: string;
   timestamp?: string;
-  read: boolean;
+  read?: boolean;
 }
 
 export interface MailsObject {
